@@ -3,29 +3,25 @@
 main:
   addi $2, $0, 5
   syscall
-  add $8, $0, $5 # horas
+  add $8, $0, $2 # horas
   
   addi $9, $0, 3600
   mult $8, $9
-  mfhi $10
-  add $11, $0, $10
+  mflo $10
+  add $11, $11, $10
   
-  sub $8, $0, $8
   addi $2, $0, 5
   syscall
-  add $8, $0, $5 # min
+  add $8, $0, $2 # min
   
-  sub $9, $0, $9
   addi $9, $0, 60
   mult $8, $9
-  mfhi $10
-  add $11, $0, $10
+  mflo $10
+  add $11, $11, $10
   
-  sub $8, $0, $8
   addi $2, $0, 5
   syscall
-  add $8, $0, $5
-  add $11, $0, $8
+  add $11, $11, $2
   
   addi $2, $0, 1
   add $4, $0, $11

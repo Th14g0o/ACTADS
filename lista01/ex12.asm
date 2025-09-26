@@ -48,18 +48,9 @@ main:
   
   div $11, $12
   mflo $13
-  mfhi $14
   
   addi $2, $0, 1
   add $4, $0, $13
-  syscall
-  
-  addi $2, $0, 11
-  addi $4, $0, '.'
-  syscall
-  
-  addi $2, $0, 1
-  add $4, $0, $14
   syscall
   
   
